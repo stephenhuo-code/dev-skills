@@ -4,15 +4,11 @@ AI 编程助手技能集合，支持 Claude Code、VS Code (GitHub Copilot) 和 
 
 ## 安装
 
-### 一行命令安装
-
-下载本仓库后，在 `dev-skills` 目录下运行：
+在 `dev-skills` 目录下运行：
 
 ```bash
 bash install.sh /path/to/your-project
 ```
-
-这会将所有平台的技能文件复制到目标项目。
 
 **按平台选装：**
 
@@ -22,29 +18,6 @@ bash install.sh /path/to/your-project --copilot             # 仅 VS Code Copilo
 bash install.sh /path/to/your-project --trae                # 仅 Trae
 bash install.sh /path/to/your-project --claude --trae       # 组合选择
 bash install.sh /path/to/your-project --skills              # 仅技能运行时脚本
-```
-
-### 手动安装
-
-如果不想用脚本，直接复制对应目录即可（以 `TARGET` 代替你的项目路径）：
-
-```bash
-TARGET=/path/to/your-project
-
-# 技能运行时脚本（所有技能共用，必须复制）
-cp -r dev-skills/skills/ "$TARGET/skills/"
-
-# Claude Code
-mkdir -p "$TARGET/.claude/skills"
-cp dev-skills/.claude/skills/*.md "$TARGET/.claude/skills/"
-
-# VS Code (GitHub Copilot)
-mkdir -p "$TARGET/.github/prompts"
-cp dev-skills/.github/prompts/*.prompt.md "$TARGET/.github/prompts/"
-
-# Trae
-mkdir -p "$TARGET/.trae/rules"
-cp dev-skills/.trae/rules/*.md "$TARGET/.trae/rules/"
 ```
 
 ### 安装后使用
