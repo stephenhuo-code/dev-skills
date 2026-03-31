@@ -1,0 +1,17 @@
+# Claude Code 本地配置
+.claude/settings.local.json
+
+# 环境变量
+.env
+*.env
+
+# eval-runner 运行时配置（含密码/token）
+skills/eval-runner/eval_config.yaml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
